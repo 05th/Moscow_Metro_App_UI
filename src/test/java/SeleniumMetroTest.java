@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.junit.Assert;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class SeleniumMetroTest {
 
@@ -22,7 +23,8 @@ public class SeleniumMetroTest {
         // открыли браузер
         //ChromeOptions options = new ChromeOptions();
 //        options.addArguments("--no-sandbox", "--headless", "--disable-dev-shm-usage");
-        driver = new ChromeDriver();
+        //driver = new ChromeDriver();
+        driver = new FirefoxDriver();
         // перешли на страницу тестового приложения
         driver.get("https://qa-metro.stand-2.praktikum-services.ru/");
 
