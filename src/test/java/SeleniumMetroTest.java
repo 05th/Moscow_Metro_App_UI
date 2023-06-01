@@ -21,8 +21,6 @@ public class SeleniumMetroTest {
     @Before
     public void setUp() {
         // открыли браузер
-        //ChromeOptions options = new ChromeOptions();
-//        options.addArguments("--no-sandbox", "--headless", "--disable-dev-shm-usage");
         //driver = new ChromeDriver();
         //driver = new SafariDriver();
         driver = new FirefoxDriver();
