@@ -65,8 +65,6 @@ public class SeleniumMetroTest {
     @Test
     public void checkRouteStationToIsCorrect() {
         // открой браузер
-        // перейди на страницу стенда
-
         // дождись загрузки страницы
         metroPage.waitForLoadHomePage();
         // построй маршрут от «Лубянки» до «Красногвардейской»
