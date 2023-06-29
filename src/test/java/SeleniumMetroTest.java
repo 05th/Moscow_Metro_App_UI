@@ -21,9 +21,9 @@ public class SeleniumMetroTest {
     @Before
     public void setUp() {
         // открыли браузер
-        //driver = new ChromeDriver();
+        driver = new ChromeDriver();
         //driver = new SafariDriver();
-        driver = new FirefoxDriver();
+        //driver = new FirefoxDriver();
         // перешли на страницу тестового приложения
         driver.get("https://qa-metro.stand-2.praktikum-services.ru/");
 
