@@ -88,7 +88,7 @@ public class MetroHomePage {
         return driver.findElements(By.className("route-list-item__time")).get(routeNumber).getText();
     }
 
-    // метод проверки с ожиданием видимости станции метро
+    // метод проверки с ожиданием видимости станции метро.
     public void waitForStationVisibility(String stationName) {
         new WebDriverWait(driver, ofSeconds(8))
                 .until(ExpectedConditions.visibilityOfElementLocated(By.xpath(String.format("//*[text()='%s']", stationName))));
