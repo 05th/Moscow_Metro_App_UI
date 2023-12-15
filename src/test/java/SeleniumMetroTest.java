@@ -11,7 +11,6 @@ public class SeleniumMetroTest {
 
     private WebDriver driver;
     private MetroHomePage metroPage;
-
     private static final String CITY_SAINTP = "Санкт-Петербург";
     private static final String STATION_SPORTIVNAYA = "Спортивная";
     private static final String STATION_LUBYANKA = "Лубянка";
