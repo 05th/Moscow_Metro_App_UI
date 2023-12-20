@@ -9,6 +9,10 @@ import static java.time.Duration.ofSeconds;
 public class MetroHomePage {
 
     private final WebDriver driver;
+    private By langSwitcherButton = By.xpath(".//button[@class = 'select_metro-borderless__button']");
+    private By langSwitcherDropMenu = By.xpath(".//ul[@class = 'select_metro__drop']");
+
+
 
     // локатор кнопки выпадающего списка городов по имени класса
     private final By selectCityButton = By.xpath(".//button[@class = 'select_metro__button']");
@@ -92,5 +96,9 @@ public class MetroHomePage {
     public void waitForStationVisibility(String stationName) {
         new WebDriverWait(driver, ofSeconds(8))
                 .until(ExpectedConditions.visibilityOfElementLocated(By.xpath(String.format("//*[text()='%s']", stationName))));
+    }
+
+    public void clickLangSwitcherButton() {
+        driver.findElement(langSwitcherButton).click();
     }
 }
