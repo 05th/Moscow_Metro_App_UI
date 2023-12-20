@@ -11,7 +11,7 @@ public class MetroHomePage {
     private final WebDriver driver;
 
     // локатор кнопки выпадающего списка городов по имени класса
-    private final By selectCityButton = By.className("select_metro__button");
+    private final By selectCityButton = By.xpath(".//button[@class = 'select_metro__button']");
 
     // локатор поля ввода «Откуда» по XPATH, поиск по плейсхолдеру
     private final By fieldFrom = By.xpath(".//input[@placeholder='Откуда']");
