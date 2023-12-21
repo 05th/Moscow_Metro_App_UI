@@ -11,6 +11,8 @@ public class MetroHomePage {
     private final WebDriver driver;
     private By langSwitcherButton = By.xpath(".//button[@class = 'select_metro-borderless__button']");
     private By langSwitcherDropMenu = By.xpath(".//ul[@class = 'select_metro__drop']");
+    private By
+    private By
 
 
 
