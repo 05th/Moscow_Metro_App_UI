@@ -103,4 +103,8 @@ public class MetroHomePage {
     public void clickLangSwitcherButton() {
         driver.findElement(langSwitcherButton).click();
     }
+
+    public String getLangSwitcherButtonText() {
+        return driver.findElement(langSwitcherButton).getText().trim();
+    }
 }
