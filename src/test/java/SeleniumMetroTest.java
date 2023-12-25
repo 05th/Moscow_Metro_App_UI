@@ -9,6 +9,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.junit.Assert;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import java.nio.channels.SeekableByteChannel;
+
 public class SeleniumMetroTest {
 
     private WebDriver driver;
@@ -75,10 +77,14 @@ public class SeleniumMetroTest {
 
     }
     @Test
-    public void checkLangSetToRU() {
+    public void checkLangSwitchButtonIsDisplayed() {
         WebElement button = driver.findElement(By.xpath(".//button[@class = 'select_metro-borderless__button']"));
-        String currentLang = button.getText().trim();
-        Assert.assertEquals(currentLang, "ru", "Language is not set to Ru");
+        Assert.assertTrue("Button is not displayed", button.isDisplayed());
+    }
+    @Test
+    public void checkISLangSetToRU() {
+       String button = metroPage.getLangSwitcherButtonText();
+       Assert.assertEquals("Language is not set to Ru", button, "Ru");
     }
 
     @After
