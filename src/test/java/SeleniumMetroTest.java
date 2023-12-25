@@ -1,7 +1,9 @@
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.junit.Assert;
@@ -71,6 +73,12 @@ public class SeleniumMetroTest {
         // проверь, что отображается корректное название станции конца маршрута
         Assert.assertEquals(STATION_KRASNOGVARD, metroPage.getRouteStationTo());
 
+    }
+    @Test
+    public void checkLangSetToRU() {
+        WebElement button = driver.findElement(By.xpath(".//button[@class = 'select_metro-borderless__button']"));
+        String currentLang = button.getText().trim();
+        Assert.assertEquals(currentLang, "ru", "Language is not set to Ru");
     }
 
     @After
