@@ -11,6 +11,9 @@ public class MetroHomePage {
     private final WebDriver driver;
     private By langSwitcherButton = By.xpath(".//button[@class = 'select_metro-borderless__button']");
     private By langSwitcherDropMenu = By.xpath(".//ul[@class = 'select_metro__drop']");
+    private By langRu = By.xpath(".//ul/li[1]/span/span");
+    private By langUa = By.xpath(".//ul/li[2]/span/span");
+    private By lang
     private String langSwitcherItem;
 //    private By
 
@@ -102,6 +105,9 @@ public class MetroHomePage {
 
     public void clickLangSwitcherButton() {
         driver.findElement(langSwitcherButton).click();
+    }
+    public void choiceLang(String langSwitcherItem) {
+        driver.findElement(By)
     }
 
     public String getLangSwitcherButtonText() {
