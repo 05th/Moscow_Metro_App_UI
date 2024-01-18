@@ -13,9 +13,7 @@ public class MetroHomePage {
     private By langSwitcherDropMenu = By.xpath(".//ul[@class = 'select_metro__drop']");
     private By langRu = By.xpath(".//ul/li[1]/span/span");
     private By langUa = By.xpath(".//ul/li[2]/span/span");
-    private By lang
-    private String langSwitcherItem;
-//    private By
+
 
 
 
