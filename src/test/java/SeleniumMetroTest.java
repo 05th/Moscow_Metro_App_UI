@@ -94,7 +94,15 @@ public class SeleniumMetroTest {
         String headingText = pageHeading.getText();
         Assert.assertEquals("Схема метро Москвы", headingText);
     }
+    @Test
+    public void testLanguageChangeToEnglish() {
+        metroPage.waitForLoadHomePage();
+        metroPage.ChangeToEnglish();
+        WebElement pageHeading = driver.findElement(By.tagName("h1"));
+        String headingText = pageHeading.getText();
 
+        Assert.assertEquals("Metro map for Moscow", headingText);
+    }
 
     @After
     public void tearDown() {
