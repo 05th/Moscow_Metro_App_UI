@@ -9,13 +9,22 @@ import static java.time.Duration.ofSeconds;
 public class MetroHomePage {
 
     private final WebDriver driver;
-    private By langSwitcherButton = By.xpath(".//button[@class = 'select_metro-borderless__button']");
-    private By langSwitcherDropMenu = By.xpath(".//ul[@class = 'select_metro__drop']");
-    private By langRu = By.xpath(".//ul/li[1]/span/span");
-    private By langUa = By.xpath(".//ul/li[2]/span/span");
+//    private By langSwitcherButton = By.xpath(".//button[@class = 'select_metro-borderless__button']");
+//    private By langSwitcherDropMenu = By.xpath(".//ul[@class = 'select_metro__drop']");
+//    private By langRu = By.xpath(".//ul/li[1]/span/span");
+//    private By langUa = By.xpath(".//ul/li[2]/span/span");
+    private final By languageDropdown = By.xpath(".//button[@class = 'select_metro-borderless__button']");
+    private final By russianOption = By.xpath("/html/body/footer/div/div[2]/ul/li[1]/div/div/button/span/span[2]");
+    private final By englishOption = By.xpath("/html/body/div[6]/div[2]/ul/li[3]/span/span/span[2]");
 
-
-
+    public void ChangeToRussian() {
+        driver.findElement(languageDropdown).click();
+        driver.findElement(russianOption).click();
+    }
+    public void ChangeToEnglish() {
+        driver.findElement(languageDropdown).click();
+        driver.findElement(englishOption).click();
+    }
 
     // локатор кнопки выпадающего списка городов по имени класса
     private final By selectCityButton = By.xpath(".//button[@class = 'select_metro__button']");
@@ -28,6 +37,7 @@ public class MetroHomePage {
 
     // локатор коллекций станций «Откуда» и «Куда» маршрута по имени класса
     private final By routeStationFromTo = By.className("route-details-block__terminal-station");
+
 
     public MetroHomePage(WebDriver driver) {
         this.driver = driver;
@@ -101,15 +111,15 @@ public class MetroHomePage {
                 .until(ExpectedConditions.visibilityOfElementLocated(By.xpath(String.format("//*[text()='%s']", stationName))));
     }
 
-    public void clickLangSwitcherButton() {
-        driver.findElement(langSwitcherButton).click();
-    }
-    public void choiceLang(String langSwitcherItem) {
-        driver.findElement(By)
-    }
-
-    public String getLangSwitcherButtonText() {
-        return driver.findElement(langSwitcherButton).getText().trim();
-    }
+//    public void clickLangSwitcherButton() {
+//        driver.findElement(langSwitcherButton).click();
+//    }
+//    public void choiceLang(String langSwitcherItem) {
+//        driver.findElement(By)
+//    }
+//
+//    public String getLangSwitcherButtonText() {
+//        return driver.findElement(langSwitcherButton).getText().trim();
+//    }
 
 }

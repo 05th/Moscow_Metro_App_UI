@@ -81,11 +81,20 @@ public class SeleniumMetroTest {
         WebElement button = driver.findElement(By.xpath(".//button[@class = 'select_metro-borderless__button']"));
         Assert.assertTrue("Button is not displayed", button.isDisplayed());
     }
+//    @Test
+//    public void checkISLangSetToRU() {
+//       String button = metroPage.getLangSwitcherButtonText();
+//       Assert.assertEquals("Language is not set to Ru", button, "Ru");
+//    }
     @Test
-    public void checkISLangSetToRU() {
-       String button = metroPage.getLangSwitcherButtonText();
-       Assert.assertEquals("Language is not set to Ru", button, "Ru");
+    public void testLanguageChangeToRussian() {
+        metroPage.waitForLoadHomePage();
+        metroPage.ChangeToRussian();
+        WebElement pageHeading = driver.findElement(By.tagName("h1"));
+        String headingText = pageHeading.getText();
+        Assert.assertEquals("Схема метро Москвы", headingText);
     }
+
 
     @After
     public void tearDown() {
