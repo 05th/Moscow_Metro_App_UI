@@ -13,17 +13,18 @@ public class MetroHomePage {
 //    private By langSwitcherDropMenu = By.xpath(".//ul[@class = 'select_metro__drop']");
 //    private By langRu = By.xpath(".//ul/li[1]/span/span");
 //    private By langUa = By.xpath(".//ul/li[2]/span/span");
-    private final By languageDropdown = By.xpath(".//button[@class = 'select_metro-borderless__button']");
-    private final By russianOption = By.xpath("/html/body/footer/div/div[2]/ul/li[1]/div/div/button/span/span[2]");
-    private final By englishOption = By.xpath("/html/body/div[6]/div[2]/ul/li[3]/span/span/span[2]");
-
-    public void ChangeToRussian() {
-        driver.findElement(languageDropdown).click();
-        driver.findElement(russianOption).click();
+    private By langDropdownMenu = By.xpath(".//button[@class = 'select_metro-borderless__button']");
+    private By langRu = By.xpath("/html/body/footer/div/div[2]/ul/li[1]/div/div/button/span/span[2]");
+    private By langEn = By.xpath("/html/body/div[6]/div[2]/ul/li[3]/span/span/span[2]");
+    private By langBy = By.xpath("/html/body/div[6]/div[2]/ul/li[2]/span/span/span[2]");
+    private By langUa = By.xpath("/html/body/div[6]/div[2]/ul/li[1]/span/span/span[2]");
+    public void changeLangToRu() {
+        driver.findElement(langDropdownMenu).click();
+        driver.findElement(langRu).click();
     }
-    public void ChangeToEnglish() {
-        driver.findElement(languageDropdown).click();
-        driver.findElement(englishOption).click();
+    public void changeLangToEn() {
+        driver.findElement(langDropdownMenu).click();
+        driver.findElement(langEn).click();
     }
 
     // локатор кнопки выпадающего списка городов по имени класса
