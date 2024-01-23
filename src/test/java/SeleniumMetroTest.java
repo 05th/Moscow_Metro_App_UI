@@ -76,12 +76,14 @@ public class SeleniumMetroTest {
         Assert.assertEquals(STATION_KRASNOGVARD, metroPage.getRouteStationTo());
 
     }
+
     @Test
     public void checkLangSwitchButtonIsDisplayed() {
         WebElement button = driver.findElement(By.xpath(".//button[@class = 'select_metro-borderless__button']"));
         Assert.assertTrue("Button is not displayed", button.isDisplayed());
     }
-//    @Test
+
+    //    @Test
 //    public void checkISLangSetToRU() {
 //       String button = metroPage.getLangSwitcherButtonText();
 //       Assert.assertEquals("Language is not set to Ru", button, "Ru");
@@ -89,19 +91,37 @@ public class SeleniumMetroTest {
     @Test
     public void testLanguageChangeToRussian() {
         metroPage.waitForLoadHomePage();
-        metroPage.ChangeToRussian();
+        metroPage.changeLangToRu();
         WebElement pageHeading = driver.findElement(By.tagName("h1"));
         String headingText = pageHeading.getText();
         Assert.assertEquals("Схема метро Москвы", headingText);
     }
+
     @Test
     public void testLanguageChangeToEnglish() {
         metroPage.waitForLoadHomePage();
-        metroPage.ChangeToEnglish();
+        metroPage.changeLangToEn();
         WebElement pageHeading = driver.findElement(By.tagName("h1"));
         String headingText = pageHeading.getText();
-
         Assert.assertEquals("Metro map for Moscow", headingText);
+    }
+
+    @Test
+    public void testChangeLangToBy() {
+        metroPage.waitForLoadHomePage();
+        metroPage.changeLangToBy();
+        WebElement pageHeading = driver.findElement(By.tagName("h1"));
+        String headingText = pageHeading.getText();
+        Assert.assertEquals("Схема метро Масквы", headingText);
+    }
+
+    @Test
+    public void testChangeLangToUa() {
+        metroPage.waitForLoadHomePage();
+        metroPage.changeLangToUa();
+        WebElement pageHeading = driver.findElement(By.tagName("h1"));
+        String headingText = pageHeading.getText();
+        Assert.assertEquals("Схема метро Москви", headingText);
     }
 
     @After
