@@ -9,23 +9,12 @@ import static java.time.Duration.ofSeconds;
 public class MetroHomePage {
 
     private final WebDriver driver;
-//    private By langSwitcherButton = By.xpath(".//button[@class = 'select_metro-borderless__button']");
-//    private By langSwitcherDropMenu = By.xpath(".//ul[@class = 'select_metro__drop']");
-//    private By langRu = By.xpath(".//ul/li[1]/span/span");
-//    private By langUa = By.xpath(".//ul/li[2]/span/span");
     private By langDropdownMenu = By.xpath(".//button[@class = 'select_metro-borderless__button']");
     private By langRu = By.xpath("/html/body/footer/div/div[2]/ul/li[1]/div/div/button/span/span[2]");
     private By langEn = By.xpath("/html/body/div[6]/div[2]/ul/li[3]/span/span/span[2]");
     private By langBy = By.xpath("/html/body/div[6]/div[2]/ul/li[2]/span/span/span[2]");
     private By langUa = By.xpath("/html/body/div[6]/div[2]/ul/li[1]/span/span/span[2]");
-    public void changeLangToRu() {
-        driver.findElement(langDropdownMenu).click();
-        driver.findElement(langRu).click();
-    }
-    public void changeLangToEn() {
-        driver.findElement(langDropdownMenu).click();
-        driver.findElement(langEn).click();
-    }
+
 
     // локатор кнопки выпадающего списка городов по имени класса
     private final By selectCityButton = By.xpath(".//button[@class = 'select_metro__button']");
@@ -111,16 +100,21 @@ public class MetroHomePage {
         new WebDriverWait(driver, ofSeconds(8))
                 .until(ExpectedConditions.visibilityOfElementLocated(By.xpath(String.format("//*[text()='%s']", stationName))));
     }
-
-//    public void clickLangSwitcherButton() {
-//        driver.findElement(langSwitcherButton).click();
-//    }
-//    public void choiceLang(String langSwitcherItem) {
-//        driver.findElement(By)
-//    }
-//
-//    public String getLangSwitcherButtonText() {
-//        return driver.findElement(langSwitcherButton).getText().trim();
-//    }
+    public void changeLangToRu() {
+        driver.findElement(langDropdownMenu).click();
+        driver.findElement(langRu).click();
+    }
+    public void changeLangToEn() {
+        driver.findElement(langDropdownMenu).click();
+        driver.findElement(langEn).click();
+    }
+    public void changeLangToBy() {
+        driver.findElement(langDropdownMenu).click();
+        driver.findElement(langBy).click();
+    }
+    public void changeLangToUa() {
+        driver.findElement(langDropdownMenu).click();
+        driver.findElement(langUa).click();
+    }
 
 }
