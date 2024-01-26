@@ -83,11 +83,6 @@ public class SeleniumMetroTest {
         Assert.assertTrue("Button is not displayed", button.isDisplayed());
     }
 
-    //    @Test
-//    public void checkISLangSetToRU() {
-//       String button = metroPage.getLangSwitcherButtonText();
-//       Assert.assertEquals("Language is not set to Ru", button, "Ru");
-//    }
     @Test
     public void testLanguageChangeToRussian() {
         metroPage.waitForLoadHomePage();
