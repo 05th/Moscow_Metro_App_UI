@@ -9,7 +9,7 @@ import static java.time.Duration.ofSeconds;
 public class MetroHomePage {
 
     private final WebDriver driver;
-    private By langDropdownMenu = By.xpath(".//button[@class = 'select_metro-borderless__button']");
+    private By langDropDownMenu = By.xpath(".//button[@class = 'select_metro-borderless__button']");
     private By langRu = By.xpath("/html/body/footer/div/div[2]/ul/li[1]/div/div/button/span/span[2]");
     private By langEn = By.xpath("/html/body/div[6]/div[2]/ul/li[3]/span/span/span[2]");
     private By langBy = By.xpath("/html/body/div[6]/div[2]/ul/li[2]/span/span/span[2]");
@@ -101,19 +101,19 @@ public class MetroHomePage {
                 .until(ExpectedConditions.visibilityOfElementLocated(By.xpath(String.format("//*[text()='%s']", stationName))));
     }
     public void changeLangToRu() {
-        driver.findElement(langDropdownMenu).click();
+        driver.findElement(langDropDownMenu).click();
         driver.findElement(langRu).click();
     }
     public void changeLangToEn() {
-        driver.findElement(langDropdownMenu).click();
+        driver.findElement(langDropDownMenu).click();
         driver.findElement(langEn).click();
     }
     public void changeLangToBy() {
-        driver.findElement(langDropdownMenu).click();
+        driver.findElement(langDropDownMenu).click();
         driver.findElement(langBy).click();
     }
     public void changeLangToUa() {
-        driver.findElement(langDropdownMenu).click();
+        driver.findElement(langDropDownMenu).click();
         driver.findElement(langUa).click();
     }
 

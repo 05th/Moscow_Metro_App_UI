@@ -32,7 +32,6 @@ public class SeleniumMetroTest {
         metroPage.waitForLoadHomePage();
 
     }
-
     // проверили выбор города
     @Test
     public void checkChooseCityDropdown() {
