@@ -100,18 +100,22 @@ public class MetroHomePage {
         new WebDriverWait(driver, ofSeconds(8))
                 .until(ExpectedConditions.visibilityOfElementLocated(By.xpath(String.format("//*[text()='%s']", stationName))));
     }
+
     public void changeLangToRu() {
         driver.findElement(langDropDownMenu).click();
         driver.findElement(langRu).click();
     }
+
     public void changeLangToEn() {
         driver.findElement(langDropDownMenu).click();
         driver.findElement(langEn).click();
     }
+
     public void changeLangToBy() {
         driver.findElement(langDropDownMenu).click();
         driver.findElement(langBy).click();
     }
+
     public void changeLangToUa() {
         driver.findElement(langDropDownMenu).click();
         driver.findElement(langUa).click();
