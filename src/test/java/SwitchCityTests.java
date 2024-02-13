@@ -1,3 +1,5 @@
-public class SwitchCityTests {
+import org.junit.Test;
 
+public class SwitchCityTests {
+    @Test
 }
