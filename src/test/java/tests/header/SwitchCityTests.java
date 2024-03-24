@@ -1,4 +1,4 @@
-package tests;
+package tests.header;
 
 import org.junit.Test;
 
