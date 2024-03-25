@@ -122,5 +122,4 @@ public class MetroHomePage {
         driver.findElement(langDropDownMenu).click();
         driver.findElement(langUa).click();
     }
-
 }
