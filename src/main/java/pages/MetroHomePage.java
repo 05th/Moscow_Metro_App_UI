@@ -9,7 +9,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import static java.time.Duration.ofSeconds;
 
 public class MetroHomePage {
-
     private final WebDriver driver;
     private By langDropDownMenu = By.xpath(".//button[@class = 'select_metro-borderless__button']");
     private By langRu = By.xpath("/html/body/footer/div/div[2]/ul/li[1]/div/div/button/span/span[2]");
