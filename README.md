@@ -1,4 +1,4 @@
-## Moscow_Metro_App_UI 
+## Moscow Metro App 
 ### Simple UI Selenium tests
 
 I am will update these test-cases from time to time;
