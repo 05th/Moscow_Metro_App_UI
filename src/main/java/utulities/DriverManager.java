@@ -10,10 +10,10 @@ public class DriverManager {
     // Метод для инициализации драйвера
     public static void initializeDriver(String browser) {
         if (browser.equalsIgnoreCase("chrome")) {
-            System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
+            System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
             driver = new ChromeDriver();
         } else if (browser.equalsIgnoreCase("firefox")) {
-            System.setProperty("webdriver.gecko.driver", "path/to/geckodriver");
+            System.setProperty("webdriver.gecko.driver", "/snap/bin/geckodriver");
             driver = new FirefoxDriver();
         } else {
             throw new IllegalArgumentException("Unsupported browser: " + browser);
