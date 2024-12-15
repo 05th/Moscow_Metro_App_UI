@@ -11,24 +11,24 @@ import pages.MetroHomePage;
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
-protected WebDriver driver;
+    protected WebDriver driver;
 
-@Before
+    @Before
     public void setUp() {
-    driver = new ChromeDriver();
-    driver.get("https://qa-metro.stand-2.praktikum-services.ru/");
-    //driver = new FirefoxDriver();
-    driver.manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
-    MetroHomePage metroPage = new MetroHomePage(driver);
-    // дождались загрузки страницы
-    metroPage.waitForLoadHomePage();
+        driver = new ChromeDriver();
+        driver.get("https://qa-metro.stand-2.praktikum-services.ru/");
+        //driver = new FirefoxDriver();
+        driver.manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
+        MetroHomePage metroPage = new MetroHomePage(driver);
+        // дождались загрузки страницы
+        metroPage.waitForLoadHomePage();
 
-}
-
-@After
-    public void tearDown() {
-    if(driver != null) {
-        driver.quit();
     }
-}
+
+    @After
+    public void tearDown() {
+        if (driver != null) {
+            driver.quit();
+        }
+    }
 }
