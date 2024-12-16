@@ -8,8 +8,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static java.time.Duration.ofSeconds;
 
-public class MetroHomePage {
-    private final WebDriver driver;
+public class MetroHomePage extends BasePage {
+
+
     private By langDropDownMenu = By.xpath(".//button[@class = 'select_metro-borderless__button']");
     private By langRu = By.xpath("/html/body/footer/div/div[2]/ul/li[1]/div/div/button/span/span[2]");
     private By langEn = By.xpath("/html/body/div[6]/div[2]/ul/li[3]/span/span/span[2]");
@@ -28,17 +29,16 @@ public class MetroHomePage {
 
     // локатор коллекций станций «Откуда» и «Куда» маршрута по имени класса
     private final By routeStationFromTo = By.className("route-details-block__terminal-station");
+    private By teatralnayaStation = By.xpath(".//*[text() = 'Театральная']");
 
 
     public MetroHomePage(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
     }
 
     // метод ожидания загрузки страницы: проверили видимость станции «Театральная»
     public void waitForLoadHomePage() {
-        // ждем 8 секунд, пока появится веб-элемент с нужным текстом
-        new WebDriverWait(driver, ofSeconds(8))
-                .until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[text() = 'Театральная']")));
+        waitForElementToBeVisible(teatralnayaStation);
     }
 
     // метод выбора города по названию
